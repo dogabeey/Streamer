@@ -11,6 +11,8 @@ public class Computer
     public GPU gpu;
     public Keyboard kb;
     public Mouse mouse;
+    public Headphone headphone;
+    public Microphone mic;
 
     public Computer(PowerSupply psu, Motherboard mb, Monitor monitor, RAM[] rams, GPU gpu, Keyboard kb = null, Mouse mouse = null)
     {
