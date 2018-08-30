@@ -14,7 +14,7 @@ public class Computer
     public Headphone headphone;
     public Microphone mic;
 
-    public Computer(PowerSupply psu, Motherboard mb, Monitor monitor, RAM[] rams, GPU gpu, Keyboard kb = null, Mouse mouse = null)
+    public Computer(PowerSupply psu, Motherboard mb, Monitor monitor, RAM[] rams, GPU gpu, Keyboard kb = null, Mouse mouse = null,Headphone headphone = null, Microphone mic = null)
     {
         this.psu = psu;
         this.mb = mb;
@@ -23,5 +23,7 @@ public class Computer
         this.gpu = gpu;
         this.kb = kb;
         this.mouse = mouse;
+        this.headphone = headphone;
+        this.mic = mic;
     }
 }
