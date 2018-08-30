@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ViewerGroup : MonoBehaviour
 {
@@ -26,13 +27,13 @@ public class ViewerGroup : MonoBehaviour
     public int population;
 
     // favorites
-    public GameType[] favoriteGames;
-    public AudioClip[] favoriteSongs;
+    public List<GameType> favoriteGames;
+    public List<AudioClip> favoriteSongs;
     public Stream.PlayStyle favStyle;
     
-    public Trait[] traits;
+    public List<Trait> traits;
 
-    public ViewerGroup(string groupName, int population, GameType[] favoriteGames, AudioClip[] favoriteSongs, Stream.PlayStyle favStyle, Trait[] traits)
+    public ViewerGroup(string groupName, int population, List<GameType> favoriteGames, List<AudioClip> favoriteSongs, Stream.PlayStyle favStyle, int traitCount)
     {
         this.groupName = groupName;
         this.population = population;
@@ -40,5 +41,15 @@ public class ViewerGroup : MonoBehaviour
         this.favoriteSongs = favoriteSongs;
         this.favStyle = favStyle;
         this.traits = traits;
+    }
+
+    public void AddRandomTraits(int count)
+    {
+        Array a = Enum.GetValues(typeof(Trait));
+        for (int i = 0; i < count; i++)
+        {
+            object v = a.GetValue(Mathf.RoundToInt(UnityEngine.Random.value * (a.Length - 1)));
+            traits.Add((Trait)v);
+        }
     }
 }
