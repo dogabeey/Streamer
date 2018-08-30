@@ -18,9 +18,11 @@ public class ViewerGroup : MonoBehaviour
         FameFollower, // Tends to watch more crowded streams.
         Hipster, // Doesn't like popular games or streamers.
         Loyalist, // Hardly unsubs once subbed a channel.
-        Troll,
-        Mocker,
-        ProWatcher,
-        Stalker
+        Troll, // Very likely to scare away other groups.
+        Mocker, // Enjoys poor gameplay.
+        ProWatcher, // Enjoys pro gameplay.
+        Stalker // Never speaks. Hardly subs.
     }
+
+    public List<Trait> traits;
 }
