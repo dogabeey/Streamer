@@ -13,6 +13,7 @@ public class Player
 
     public class Channel
     {
+        public static Channel instance;
         public string name;
         public int totalViews;
         public bool isPremium;
@@ -22,6 +23,12 @@ public class Player
             this.name = name;
             this.totalViews = totalViews;
             this.isPremium = isPremium;
+        }
+
+        public void InitChannel(string name, int totalViews, bool isPremium)
+        {
+            instance = new Channel(name, totalViews, isPremium);
+
         }
     }
 
@@ -40,10 +47,5 @@ public class Player
         this.profile = profile;
         this.popularity = popularity;
         this.gender = gender;
-    }
-
-    public Channel CreateChannel(string name, int totalViews, bool isPremium)
-    {
-        return new Channel(name, totalViews, isPremium);
     }
 }
