@@ -1,16 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Video;
 using UnityEngine.UI;
 
-public class UIControl : MonoBehaviour {
-
-    public VideoPlayer bg;
+public class UIControl : MonoBehaviour
+{
 	// Use this for initialization
 	void Start ()
     {
-        bg.
 	}
 	
 	// Update is called once per frame
@@ -18,4 +15,25 @@ public class UIControl : MonoBehaviour {
     {
 		
 	}
+
+    public void NewGame()
+    {
+
+    }
+
+    public void LoadGame()
+    {
+
+    }
+
+    public void Options()
+    {
+
+    }
+
+    public void Exit()
+    {
+        Debug.Log("çıkılıyor");
+        Application.Quit();
+    }
 }
