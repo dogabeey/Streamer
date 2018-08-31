@@ -30,8 +30,10 @@ public class ViewerGroup : MonoBehaviour
     public List<GameType> favoriteGames;
     public List<AudioClip> favoriteSongs;
     public Stream.PlayStyle favStyle;
-    
+
     public List<Trait> traits;
+    public Eppy.Tuple<Stream, int> views;
+    public Eppy.Tuple<Player.Channel, int> subscription;
 
     public ViewerGroup(string groupName, int population, List<GameType> favoriteGames, List<AudioClip> favoriteSongs, Stream.PlayStyle favStyle, int traitCount)
     {
