@@ -40,7 +40,7 @@ public class ViewerGroup : MonoBehaviour
         this.favoriteGames = favoriteGames;
         this.favoriteSongs = favoriteSongs;
         this.favStyle = favStyle;
-        this.traits = traits;
+        AddRandomTraits(traitCount);
     }
 
     public void AddRandomTraits(int count)
@@ -51,5 +51,10 @@ public class ViewerGroup : MonoBehaviour
             object v = a.GetValue(Mathf.RoundToInt(UnityEngine.Random.value * (a.Length - 1)));
             traits.Add((Trait)v);
         }
+    }
+
+    public bool HasTrait(Trait t)
+    {
+        return traits.Exists(x => x == t);
     }
 }
