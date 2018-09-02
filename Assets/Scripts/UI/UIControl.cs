@@ -36,4 +36,6 @@ public class UIControl : MonoBehaviour
         Debug.Log("çıkılıyor");
         Application.Quit();
     }
+
+    
 }
