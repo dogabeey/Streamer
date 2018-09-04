@@ -5,6 +5,8 @@ using UnityEngine.Networking;
 
 public class Player
 {
+    public static List<Player> players = new List<Player>();
+
     public enum Gender
     {
         male,
@@ -13,21 +15,19 @@ public class Player
 
     public class Channel
     {
-        public static Channel instance;
         public string name;
         public int totalViews;
         public bool isPremium;
 
-        private Channel(string name, int totalViews, bool isPremium)
+        public Channel(string name, int totalViews, bool isPremium)
         {
             this.name = name;
             this.totalViews = totalViews;
             this.isPremium = isPremium;
         }
 
-        public void InitChannel(string name, int totalViews, bool isPremium)
+        public Channel()
         {
-            instance = new Channel(name, totalViews, isPremium);
 
         }
     }
@@ -38,14 +38,24 @@ public class Player
     public Channel channel;
     public Gender gender;
 
-    Eppy.Tuple<Game, float> gameSkill;
-    Eppy.Tuple<Game, float> playTime; //in minutes. 
+    public Eppy.Tuple<Game, float> gameSkill;
+    public Eppy.Tuple<Game, float> playTime; //in minutes. 
 
-    public Player(string name, string profile, float popularity, Gender gender)
+    public Player()
+    {
+
+    }
+
+    public Player(string name, string profile, Gender gender, float popularity, Channel channel = null, Eppy.Tuple<Game,float> gameSkill = null, Eppy.Tuple<Game, float> playTime = null)
     {
         this.name = name;
         this.profile = profile;
         this.popularity = popularity;
         this.gender = gender;
+        this.channel = channel;
+        this.gameSkill = gameSkill;
+        this.playTime = playTime;
+
+        players.Add(this);
     }
 }
