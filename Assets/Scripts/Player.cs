@@ -13,6 +13,40 @@ public class Player
         female
     }
 
+    public class GameSkill
+    {
+        public Game game;
+        public float skill;
+
+        public GameSkill()
+        {
+
+        }
+
+        public GameSkill(Game game, float skill)
+        {
+            this.game = game;
+            this.skill = skill;
+        }
+    }
+
+    public class PlayTime
+    {
+        public Game game;
+        public float time; // in minutes
+
+        public PlayTime()
+        {
+
+        }
+
+        public PlayTime(Game game, float time)
+        {
+            this.game = game;
+            this.time = time;
+        }
+    }
+
     public class Channel
     {
         public string name;
@@ -36,17 +70,16 @@ public class Player
     public string profile;
     public float popularity;
     public Channel channel;
+    public GameSkill[] gameSkill;
+    public PlayTime[] playTime;
     public Gender gender;
-
-    public Eppy.Tuple<Game, float> gameSkill;
-    public Eppy.Tuple<Game, float> playTime; //in minutes. 
 
     public Player()
     {
 
     }
 
-    public Player(string name, string profile, Gender gender, float popularity, Channel channel = null, Eppy.Tuple<Game,float> gameSkill = null, Eppy.Tuple<Game, float> playTime = null)
+    public Player(string name, string profile, Gender gender, float popularity, Channel channel = null, GameSkill[] gameSkill = null, PlayTime[] playTime = null)
     {
         this.name = name;
         this.profile = profile;

@@ -9,14 +9,10 @@ public class TestInit : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        string example = File.ReadAllText("Assets/Scripts/XML/doga.xml");
-        Player p = XmlParse.Deserialize<Player>(example);
-        new Player(p.name, p.profile, p.gender, p.popularity,p.channel,p.gameSkill,p.playTime);
-
-        foreach (Player pl in Player.players)
-        {
-            Debug.Log(p.name);
-        }
+        Game g = new Game("Rise of nations",new GameType("strategy", 1, 2), 13, 12);
+        Player p = new Player("Doğa Can", "A streamer", Player.Gender.male, 0, new Player.Channel("dogabeey gaming", 2135, true),new Player.GameSkill[] { new Player.GameSkill(g, 65) });
+        string parse = XmlParse.Serialize(p);
+        Debug.Log(parse);
 	}
 	
 	// Update is called once per frame
