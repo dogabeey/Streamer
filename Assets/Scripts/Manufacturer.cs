@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Manufacturer
 {
+    public static List<Manufacturer> manufacturers = new List<Manufacturer>();
+
     public string name;
     public float prestige;
 

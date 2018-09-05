@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameType
 {
-    List<GameType> types = new List<GameType>();
+    public static List<GameType> types = new List<GameType>();
 
     public string name;
     [Range(1, 5)] public float popularityRate;

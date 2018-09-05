@@ -5,6 +5,8 @@ using System.IO;
 
 public class Game
 {
+    public static List<Game> games = new List<Game>();
+
     string name;
     GameType type;
     float cost;

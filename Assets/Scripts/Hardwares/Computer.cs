@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Computer
 {
+    public static List<Computer> computers = new List<Computer>();
+
     public PowerSupply psu;
     public Motherboard mb;
     public Monitor monitor;
