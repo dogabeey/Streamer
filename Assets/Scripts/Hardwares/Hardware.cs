@@ -12,6 +12,10 @@ public class Hardware
 
     public float prestige;
 
+    public Hardware()
+    {
+
+    }
     public Hardware(string modelName, Manufacturer manufacturer, float malfunctionRate, float cost,bool isMantadory)
     {
         this.modelName = modelName;

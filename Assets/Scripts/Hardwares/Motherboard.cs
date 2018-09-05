@@ -10,6 +10,10 @@ public class Motherboard : Hardware
     [Range(1, 4)] public int maxGpuSlot;
     [Range(2, 5)] public float cpuSpeed;
 
+    public Motherboard()
+    {
+
+    }
     public Motherboard(string modelName, Manufacturer manufacturer, float malfunctionRate, float cost, int maxRamSlot, RAM.RAMType ramType, int cpuSpeed, bool isMantadory) : base(modelName, manufacturer, malfunctionRate, cost, isMantadory)
     {
         this.ramType = ramType;

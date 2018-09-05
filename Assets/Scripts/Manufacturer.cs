@@ -6,4 +6,14 @@ public class Manufacturer
 {
     public string name;
     public float prestige;
+
+    public Manufacturer()
+    {
+
+    }
+    public Manufacturer(string name, float prestige)
+    {
+        this.name = name;
+        this.prestige = prestige;
+    }
 }

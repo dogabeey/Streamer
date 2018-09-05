@@ -7,6 +7,10 @@ public class Microphone : Hardware
     public float maxFrequency; //kHz
     public float sensitivity; //dB
 
+    public Microphone()
+    {
+
+    }
     public Microphone(string modelName, Manufacturer manufacturer, float malfunctionRate, float cost, bool isMantadory, float maxFrequency, float sensitivity) : base(modelName, manufacturer, malfunctionRate, cost, isMantadory)
     {
         this.maxFrequency = maxFrequency;

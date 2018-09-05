@@ -14,6 +14,10 @@ public class Computer
     public Headphone headphone;
     public Microphone mic;
 
+    public Computer()
+    {
+
+    }
     public Computer(PowerSupply psu, Motherboard mb, Monitor monitor, RAM[] rams, GPU gpu, Keyboard kb = null, Mouse mouse = null,Headphone headphone = null, Microphone mic = null)
     {
         this.psu = psu;

@@ -7,6 +7,10 @@ public class Mouse : Hardware
     public int DPI;
     public int additionalButtons;
 
+    public Mouse()
+    {
+
+    }
     public Mouse(string modelName, Manufacturer manufacturer, float malfunctionRate, float cost, bool isMantadory, int DPI, int additionalButtons) : base(modelName, manufacturer, malfunctionRate, cost, isMantadory)
     {
         this.DPI = DPI;
