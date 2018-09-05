@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-16"?>
 <Player xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <name>Doğa Can</name>
-  <profile>Something something</profile>
-  <popularity>0</popularity>
+  <name>Dora Özsoy</name>
+  <profile>LoL streamer</profile>
+  <popularity>10</popularity>
   <channel>
-    <name>dogabeey gaming</name>
-    <totalViews>0</totalViews>
-    <isPremium>false</isPremium>
+    <name>stratera studio</name>
+    <totalViews>21305</totalViews>
+    <isPremium>true</isPremium>
   </channel>
   <gender>male</gender>
 </Player>
