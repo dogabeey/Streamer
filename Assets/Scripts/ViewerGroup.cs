@@ -35,12 +35,14 @@ public class ViewerGroup : MonoBehaviour
     public Eppy.Tuple<Stream, int> views;
     public Eppy.Tuple<Player.Channel, int> subscription;
 
-    public ViewerGroup(string groupName, int population, List<GameType> favoriteGames, List<AudioClip> favoriteSongs, Stream.PlayStyle favStyle, int traitCount)
+    public ViewerGroup(string groupName, int population, List<string> favoriteGames, Stream.PlayStyle favStyle, int traitCount)
     {
         this.groupName = groupName;
         this.population = population;
-        this.favoriteGames = favoriteGames;
-        this.favoriteSongs = favoriteSongs;
+        foreach (string s in favoriteGames)
+        {
+            this.favoriteGames.Add(GameType.types.Find(g => g.name == s));
+        }
         this.favStyle = favStyle;
         AddRandomTraits(traitCount);
     }

@@ -50,4 +50,10 @@ public static class XmlParse
         }
         return retVal;
     }
+
+    public static void ExportAll<T>(List<T> list)
+    {
+        // DOLDURULACAK
+        // burada kaldım.
+    }
 }

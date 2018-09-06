@@ -14,7 +14,7 @@ public class Game
 
     public Game()
     {
-        
+
     }
     public Game(string name, GameType type, float cost, float popularity)
     {
@@ -23,13 +23,13 @@ public class Game
         this.cost = cost;
         this.popularity = popularity;
     }
-    public Game(GameType type, float cost, float popularity)
+
+    public Game(string name, string type, float cost, float popularity)
     {
-        this.type = type;
+        this.name = name;
+        this.type = GameType.types.Find(g => g.name == type);
         this.cost = cost;
         this.popularity = popularity;
-        string[] randomList = File.ReadAllLines("Assets/Scripts/random names/strategy.txt");
-        this.name = randomList[Mathf.RoundToInt(randomList.Length * Random.value) - 1];
     }
 
     public float GetPopularity()

@@ -49,6 +49,8 @@ public class Player
 
     public class Channel
     {
+        public static List<Channel> channels = new List<Channel>();
+
         public string name;
         public int totalViews;
         public bool isPremium;
@@ -88,6 +90,16 @@ public class Player
         this.channel = channel;
         this.gameSkill = gameSkill;
         this.playTime = playTime;
+
+        players.Add(this);
+    }
+    public Player(string name, string profile, Gender gender, float popularity, string channel = null)
+    {
+        this.name = name;
+        this.profile = profile;
+        this.popularity = popularity;
+        this.gender = gender;
+        this.channel = Channel.channels.Find(c => c.name == channel);
 
         players.Add(this);
     }
