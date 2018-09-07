@@ -9,11 +9,44 @@ public class TestInit : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        new Game(new GameType("strategy", 1, 1));
-        foreach (Game g in Game.games)
+        //new GameType("action", 1, 1);
+        //new GameType("strategy", 1, 1);
+        //new GameType("adventure", 1, 1);
+        //new GameType("simulation", 1, 1);
+        //new GameType("sports", 1, 1);
+        //new GameType("rpg", 1, 1);
         {
-            Debug.Log(g.name);
-        }
+            for (int i = 0; i < 10; i++)
+            {
+                Game g = new Game(new GameType("action", 1, 1));
+                Debug.Log((g.name + " is a " + g.type.name + " game."));
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Game g = new Game(new GameType("strategy", 1, 1));
+                Debug.Log((g.name + " is a " + g.type.name + " game."));
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Game g = new Game(new GameType("adventure", 1, 1));
+                Debug.Log((g.name + " is a " + g.type.name + " game."));
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Game g = new Game(new GameType("simulation", 1, 1));
+                Debug.Log((g.name + " is a " + g.type.name + " game."));
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Game g = new Game(new GameType("sports", 1, 1));
+                Debug.Log((g.name + " is a " + g.type.name + " game."));
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Game g = new Game(new GameType("rpg", 1, 1));
+                Debug.Log((g.name + " is a " + g.type.name + " game."));
+            }
+        } // random game initializor
     }
 	
 	// Update is called once per frame
