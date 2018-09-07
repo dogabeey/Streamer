@@ -9,12 +9,11 @@ public class TestInit : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        GameType tempType = new GameType("Template", 2, 0.2f);
-        Manufacturer tempManu = new Manufacturer("Template", 72);
-        Game tempGame = new Game("Template: Return of The Temp", "Template", 20, 80);
-        Player tempPlayer = new Player("Tempman", "Just another temporary streamer", Player.Gender.male,1);
-        ViewerGroup tempGroup = new ViewerGroup("1", 42150, new List<string> { "Template: Return of The Temp" }, Stream.PlayStyle.Educational, 4);
-        XmlParse.ExportAll(GameType.types);
+        new Game(new GameType("strategy", 1, 1));
+        foreach (Game g in Game.games)
+        {
+            Debug.Log(g.name);
+        }
     }
 	
 	// Update is called once per frame
