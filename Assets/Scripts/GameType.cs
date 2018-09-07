@@ -10,10 +10,15 @@ public class GameType
     [Range(1, 5)] public float popularityRate;
     [Range(1, 5)] public float costRate;
 
+    public GameType()
+    {
+
+    }
     public GameType(string name, float popularityRate, float costRate)
     {
         this.name = name;
         this.popularityRate = popularityRate;
         this.costRate = costRate;
+        types.Add(this);
     }
 }

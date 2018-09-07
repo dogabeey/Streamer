@@ -93,13 +93,13 @@ public class Player
 
         players.Add(this);
     }
-    public Player(string name, string profile, Gender gender, float popularity, string channel = null)
+    public Player(string name, string profile, Gender gender, float popularity)
     {
         this.name = name;
         this.profile = profile;
         this.popularity = popularity;
         this.gender = gender;
-        this.channel = Channel.channels.Find(c => c.name == channel);
+        this.channel = new Channel(this.name + "'s channel", 123432, false);
 
         players.Add(this);
     }

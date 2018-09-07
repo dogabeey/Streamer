@@ -22,6 +22,7 @@ public class Game
         this.type = type;
         this.cost = cost;
         this.popularity = popularity;
+        games.Add(this);
     }
 
     public Game(string name, string type, float cost, float popularity)
@@ -30,6 +31,7 @@ public class Game
         this.type = GameType.types.Find(g => g.name == type);
         this.cost = cost;
         this.popularity = popularity;
+        games.Add(this);
     }
 
     public float GetPopularity()

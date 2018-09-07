@@ -17,5 +17,6 @@ public class Manufacturer
     {
         this.name = name;
         this.prestige = prestige;
+        manufacturers.Add(this);
     }
 }

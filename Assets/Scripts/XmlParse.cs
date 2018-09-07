@@ -39,7 +39,7 @@ public static class XmlParse
     {
         List<T> retVal = new List<T>();
 
-        string directory = Directory.GetDirectories("Assets/XML",typeof(T).ToString())[0];
+        string directory = Directory.GetDirectories("Assets\\XML",typeof(T).ToString())[0];
         Debug.Log(directory);
         string[] files = Directory.GetFiles(directory, "*.xml");
         foreach (string file in files)
@@ -53,7 +53,18 @@ public static class XmlParse
 
     public static void ExportAll<T>(List<T> list)
     {
-        // DOLDURULACAK
-        // burada kaldım.
+        foreach (T item in list)
+        {
+            if (Directory.GetDirectories("Assets/XML", typeof(T).ToString()).Length == 0)
+            {
+                Directory.CreateDirectory("Assets\\XML\\" + typeof(T).ToString());
+            }
+            string directory = Directory.GetDirectories("Assets/XML", typeof(T).ToString())[0];
+            Debug.Log(directory);
+            string xmlText = Serialize(item);
+            Debug.Log(xmlText);
+            File.Create(directory + "/temp.xml");
+            File.WriteAllText(directory + "/temp.xml", xmlText);
+        }
     }
 }

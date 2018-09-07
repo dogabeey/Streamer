@@ -5,6 +5,8 @@ using System;
 
 public class ViewerGroup : MonoBehaviour
 {
+    public static List<ViewerGroup> groups = new List<ViewerGroup>();
+
     public enum Trait
     {
         HypeChaser, // Tends to watch popular games more.
@@ -39,17 +41,21 @@ public class ViewerGroup : MonoBehaviour
     {
         this.groupName = groupName;
         this.population = population;
+        this.favoriteGames = new List<GameType>();
         foreach (string s in favoriteGames)
         {
             this.favoriteGames.Add(GameType.types.Find(g => g.name == s));
         }
         this.favStyle = favStyle;
         AddRandomTraits(traitCount);
+
+        groups.Add(this);
     }
 
     public void AddRandomTraits(int count)
     {
         Array a = Enum.GetValues(typeof(Trait));
+        traits = new List<Trait>();
         for (int i = 0; i < count; i++)
         {
             object v = a.GetValue(Mathf.RoundToInt(UnityEngine.Random.value * (a.Length - 1)));
