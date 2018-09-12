@@ -46,7 +46,7 @@ public class TestInit : MonoBehaviour
                 Game g = new Game(new GameType("rpg", 1, 1));
                 Debug.Log((g.name + " is a " + g.type.name + " game."));
             }
-        } // random game initializor
+        } // random game initializing
     }
 	
 	// Update is called once per frame
