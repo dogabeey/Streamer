@@ -23,6 +23,8 @@ public class Stream : MonoBehaviour
     public PlayStyle playStyle;
     public AudioClip song;
 
+    public int views;
+
     public Stream(Player player, int startHour, int duration, Game game)
     {
         this.player = player;

@@ -10,7 +10,7 @@ public class ViewerGroup : MonoBehaviour
     public enum Trait
     {
         HypeChaser, // Tends to watch popular games more.
-        FameFollower, // Tends to watch more crowded streams.
+        FameFollower, // Tends to watch more popular players.
         Hipster, // Doesn't like popular games or streamers.
         Loyalist, // Hardly unsubs once subbed a channel.
         Troll, // Very likely to scare away other groups.
@@ -34,8 +34,8 @@ public class ViewerGroup : MonoBehaviour
     public Stream.PlayStyle favStyle;
 
     public List<Trait> traits;
-    public Eppy.Tuple<Stream, int> views;
-    public Eppy.Tuple<Player.Channel, int> subscription;
+    //public Eppy.Tuple<Stream, int> views;
+    //public Eppy.Tuple<Player.Channel, int> subscription;
 
     public ViewerGroup(string groupName, int population, List<string> favoriteGames, Stream.PlayStyle favStyle, int traitCount)
     {

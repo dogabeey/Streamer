@@ -72,8 +72,8 @@ public class Player
     public string profile;
     public float popularity;
     public Channel channel;
-    public GameSkill[] gameSkill;
-    public PlayTime[] playTime;
+    public List<GameSkill> gameSkill;
+    public List<PlayTime> playTime;
     public Gender gender;
 
     public Player()
@@ -81,7 +81,7 @@ public class Player
 
     }
 
-    public Player(string name, string profile, Gender gender, float popularity, Channel channel = null, GameSkill[] gameSkill = null, PlayTime[] playTime = null)
+    public Player(string name, string profile, Gender gender, float popularity, Channel channel = null, List<GameSkill> gameSkill = null, List<PlayTime> playTime = null)
     {
         this.name = name;
         this.profile = profile;
