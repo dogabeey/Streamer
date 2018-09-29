@@ -47,6 +47,12 @@ public class TestInit : MonoBehaviour
                 Debug.Log((g.name + " is a " + g.type.name + " game."));
             }
         } // random game initializing
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                new Player()
+            }
+        }
     }
 	
 	// Update is called once per frame

@@ -93,14 +93,12 @@ public class Player
 
         players.Add(this);
     }
-    public Player(string name, string profile, Gender gender, float popularity)
+    public Player(float popularity, Channel channel = null, List<GameSkill> gameSkill = null, List<PlayTime> playTime = null)
     {
-        this.name = name;
-        this.profile = profile;
-        this.popularity = popularity;
-        this.gender = gender;
-        this.channel = new Channel(this.name + "'s channel", 123432, false);
-
-        players.Add(this);
+        do
+        {
+            string[] randomList = File.ReadAllLines("Assets/random names/" + type.name.ToLower() + ".txt");
+            name = randomList[new System.Random().Next(0, randomList.Length - 1)];
+        } while (games.Exists(g => g.name == name));
     }
 }
