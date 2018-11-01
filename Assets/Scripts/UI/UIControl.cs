@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class UIControl : MonoBehaviour
 {
+    public Animator anim;
 	// Use this for initialization
 	void Start ()
     {
+        anim.Play("anim");
 	}
 	
 	// Update is called once per frame

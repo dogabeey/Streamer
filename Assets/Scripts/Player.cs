@@ -93,12 +93,12 @@ public class Player
 
         players.Add(this);
     }
-    public Player(float popularity, Channel channel = null, List<GameSkill> gameSkill = null, List<PlayTime> playTime = null)
-    {
-        do
-        {
-            string[] randomList = File.ReadAllLines("Assets/random names/" + type.name.ToLower() + ".txt");
-            name = randomList[new System.Random().Next(0, randomList.Length - 1)];
-        } while (games.Exists(g => g.name == name));
-    }
+    //public Player(float popularity, Channel channel = null, List<GameSkill> gameSkill = null, List<PlayTime> playTime = null)
+    //{
+    //    do
+    //    {
+    //        string[] randomList = File.ReadAllLines("Assets/random names/" + type.name.ToLower() + ".txt");
+    //        name = randomList[new System.Random().Next(0, randomList.Length - 1)];
+    //    } while (games.Exists(g => g.name == name));
+    //}
 }

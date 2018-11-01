@@ -4,32 +4,32 @@ Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
     Renderer: NVIDIA GeForce GT 730 (ID=0xf02)
     Vendor:   NVIDIA
-    VRAM:     2000 MB
-    Driver:   23.21.13.8871
+    VRAM:     3072 MB
+    Driver:   23.21.13.9135
 Begin MonoManager ReloadAssembly
-Platform assembly: E:\Unity Project\Streamer\streamer_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading E:\Unity Project\Streamer\streamer_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: E:\Unity Project\Streamer\streamer_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading E:\Unity Project\Streamer\streamer_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: E:\Unity Project\Streamer\streamer_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading E:\Unity Project\Streamer\streamer_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: E:\Unity Project\Streamer\streamer_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading E:\Unity Project\Streamer\streamer_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: E:\Unity Project\Streamer\streamer_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading E:\Unity Project\Streamer\streamer_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-Platform assembly: E:\Unity Project\Streamer\streamer_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading E:\Unity Project\Streamer\streamer_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.158 seconds
-Platform assembly: E:\Unity Project\Streamer\streamer_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: E:\Unity Project\Streamer\streamer_Data\Managed\System.dll (this message is harmless)
-desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
+Platform assembly: C:\UnityProjects\Streamer\streamer_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\UnityProjects\Streamer\streamer_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\UnityProjects\Streamer\streamer_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\UnityProjects\Streamer\streamer_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\UnityProjects\Streamer\streamer_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\UnityProjects\Streamer\streamer_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\UnityProjects\Streamer\streamer_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\UnityProjects\Streamer\streamer_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\UnityProjects\Streamer\streamer_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\UnityProjects\Streamer\streamer_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\UnityProjects\Streamer\streamer_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\UnityProjects\Streamer\streamer_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.448 seconds
+Platform assembly: C:\UnityProjects\Streamer\streamer_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\UnityProjects\Streamer\streamer_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.933936 ms
+UnloadTime: 2.932056 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3538 -> priority: 1 
-  Thread -> id: b58 -> priority: 1 
+  Thread -> id: 2f24 -> priority: 1 
+  Thread -> id: 824 -> priority: 1 
 çıkılıyor
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)

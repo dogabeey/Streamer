@@ -50,7 +50,7 @@ public class TestInit : MonoBehaviour
         {
             for (int i = 0; i < 20; i++)
             {
-                new Player()
+                new Player();
             }
         }
     }
