@@ -10,7 +10,7 @@ public class Monitor : Hardware
     {
 
     }
-    public Monitor(string modelName, Manufacturer manufacturer, float malfunctionRate, float cost, bool isMantadory, Vector2 resolution) : base(modelName, manufacturer, malfunctionRate, cost, isMantadory)
+    public Monitor(string modelName,string manufacturer, float malfunctionRate, float cost, bool isMantadory, Vector2 resolution) : base(modelName, manufacturer, malfunctionRate, cost)
     {
         this.resolution = resolution;
     }

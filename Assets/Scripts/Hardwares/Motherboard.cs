@@ -14,7 +14,7 @@ public class Motherboard : Hardware
     {
 
     }
-    public Motherboard(string modelName, Manufacturer manufacturer, float malfunctionRate, float cost, int maxRamSlot, RAM.RAMType ramType, int cpuSpeed, bool isMantadory) : base(modelName, manufacturer, malfunctionRate, cost, isMantadory)
+    public Motherboard(string modelName,string manufacturer, float malfunctionRate, float cost, int maxRamSlot, RAM.RAMType ramType, int cpuSpeed, bool isMantadory) : base(modelName, manufacturer, malfunctionRate, cost)
     {
         this.ramType = ramType;
         this.maxRamSlot = maxRamSlot;

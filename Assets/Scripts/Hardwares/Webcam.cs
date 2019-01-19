@@ -8,7 +8,7 @@ public class Webcam : Hardware
     {
 
     }
-    public Webcam(string modelName, Manufacturer manufacturer, float malfunctionRate, float cost, bool isMantadory) : base(modelName, manufacturer, malfunctionRate, cost, isMantadory)
+    public Webcam(string modelName,string manufacturer, float malfunctionRate, float cost, bool isMantadory) : base(modelName, manufacturer, malfunctionRate, cost)
     {
 
     }

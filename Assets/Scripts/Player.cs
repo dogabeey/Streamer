@@ -23,9 +23,9 @@ public class Player
 
         }
 
-        public GameSkill(Game game, float skill)
+        public GameSkill(string game, float skill)
         {
-            this.game = game;
+            this.game = Game.games.Find(g => g.name == game);
             this.skill = skill;
         }
     }
@@ -40,9 +40,9 @@ public class Player
 
         }
 
-        public PlayTime(Game game, float time)
+        public PlayTime(string game, float time)
         {
-            this.game = game;
+            this.game = Game.games.Find(g => g.name == game);
             this.time = time;
         }
     }

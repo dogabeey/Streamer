@@ -11,7 +11,7 @@ public class Microphone : Hardware
     {
 
     }
-    public Microphone(string modelName, Manufacturer manufacturer, float malfunctionRate, float cost, bool isMantadory, float maxFrequency, float sensitivity) : base(modelName, manufacturer, malfunctionRate, cost, isMantadory)
+    public Microphone(string modelName,string manufacturer, float malfunctionRate, float cost, bool isMantadory, float maxFrequency, float sensitivity) : base(modelName, manufacturer, malfunctionRate, cost)
     {
         this.maxFrequency = maxFrequency;
         this.sensitivity = sensitivity;

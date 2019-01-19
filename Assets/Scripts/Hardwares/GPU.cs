@@ -7,7 +7,7 @@
     {
 
     }
-    public GPU(string modelName, Manufacturer manufacturer, float malfunctionRate, float cost, float memory, float bus, bool isMantadory) : base(modelName, manufacturer, malfunctionRate, cost, isMantadory)
+    public GPU(string modelName,string manufacturer, float malfunctionRate, float cost, float memory, float bus, bool isMantadory) : base(modelName, manufacturer, malfunctionRate, cost)
     {
         this.memory = memory;
         this.bus = bus;

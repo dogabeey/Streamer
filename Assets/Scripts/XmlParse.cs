@@ -16,7 +16,7 @@ public static class XmlParse
             return stringwriter.ToString();
         }
         catch
-        {   
+        {
             throw;
         }
     }
@@ -39,7 +39,7 @@ public static class XmlParse
     {
         List<T> retVal = new List<T>();
 
-        string directory = Directory.GetDirectories("Assets\\XML",typeof(T).ToString())[0];
+        string directory = Directory.GetDirectories("Assets\\XML", typeof(T).ToString())[0];
         Debug.Log(directory);
         string[] files = Directory.GetFiles(directory, "*.xml");
         foreach (string file in files)
@@ -63,8 +63,8 @@ public static class XmlParse
             Debug.Log(directory);
             string xmlText = Serialize(item);
             Debug.Log(xmlText);
-            File.Create(directory + "/temp.xml");
-            File.WriteAllText(directory + "/temp.xml", xmlText);
+            File.Create(directory + "/" + typeof(T).ToString() + "_" + list.FindIndex(t => t.GetHashCode() == item.GetHashCode()) + ".xml").Dispose();
+            File.WriteAllText(directory + "/" + typeof(T).ToString() + "_" + list.FindIndex(t => t.GetHashCode() == item.GetHashCode()) + ".xml", xmlText);
         }
     }
 }

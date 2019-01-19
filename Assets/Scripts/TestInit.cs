@@ -9,50 +9,20 @@ public class TestInit : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        //new GameType("action", 1, 1);
-        //new GameType("strategy", 1, 1);
-        //new GameType("adventure", 1, 1);
-        //new GameType("simulation", 1, 1);
-        //new GameType("sports", 1, 1);
-        //new GameType("rpg", 1, 1);
+        new GameType("action", 1, 1);
+        new Game("Call of Duty", "action", 70, 40);
+        new Manufacturer("Lobbytech", 90);
+        new Webcam("A101 Pristine", "Lobbytech", 1.0f, 70, false);
+        for (int i = 0; i < 20; i++)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                Game g = new Game(new GameType("action", 1, 1));
-                Debug.Log((g.name + " is a " + g.type.name + " game."));
-            }
-            for (int i = 0; i < 10; i++)
-            {
-                Game g = new Game(new GameType("strategy", 1, 1));
-                Debug.Log((g.name + " is a " + g.type.name + " game."));
-            }
-            for (int i = 0; i < 10; i++)
-            {
-                Game g = new Game(new GameType("adventure", 1, 1));
-                Debug.Log((g.name + " is a " + g.type.name + " game."));
-            }
-            for (int i = 0; i < 10; i++)
-            {
-                Game g = new Game(new GameType("simulation", 1, 1));
-                Debug.Log((g.name + " is a " + g.type.name + " game."));
-            }
-            for (int i = 0; i < 10; i++)
-            {
-                Game g = new Game(new GameType("sports", 1, 1));
-                Debug.Log((g.name + " is a " + g.type.name + " game."));
-            }
-            for (int i = 0; i < 10; i++)
-            {
-                Game g = new Game(new GameType("rpg", 1, 1));
-                Debug.Log((g.name + " is a " + g.type.name + " game."));
-            }
-        } // random game initializing
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                new Player();
-            }
+            new Player();
         }
+
+        XmlParse.ExportAll(GameType.types);
+        XmlParse.ExportAll(Game.games);
+        XmlParse.ExportAll(Manufacturer.manufacturers);
+        //XmlParse.ExportAll(Webcam.);
+
     }
 	
 	// Update is called once per frame

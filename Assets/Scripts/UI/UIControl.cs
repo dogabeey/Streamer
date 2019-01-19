@@ -9,7 +9,7 @@ public class UIControl : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        anim.Play("anim");
+
 	}
 	
 	// Update is called once per frame

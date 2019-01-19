@@ -12,6 +12,10 @@ public class Game
     public float cost;
     public float popularity;
 
+    public Game()
+    {
+
+    }
     /// <summary>
     /// Creates a totally random game with random name, type, etc... You can specify how many games you want to create.
     /// </summary>

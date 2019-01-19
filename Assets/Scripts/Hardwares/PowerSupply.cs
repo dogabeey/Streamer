@@ -10,7 +10,7 @@ public class PowerSupply : Hardware
     {
 
     }
-    public PowerSupply(string modelName, Manufacturer manufacturer, float malfunctionRate, float cost, float malfReductionRate, bool isMantadory) : base(modelName, manufacturer, malfunctionRate, cost, isMantadory)
+    public PowerSupply(string modelName,string manufacturer, float malfunctionRate, float cost, float malfReductionRate, bool isMantadory) : base(modelName, manufacturer, malfunctionRate, cost)
     {
         this.malfReductionRate = malfReductionRate;
     }

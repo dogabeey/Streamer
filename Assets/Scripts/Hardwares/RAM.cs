@@ -17,7 +17,7 @@ public class RAM : Hardware
     public RAMType type;
     public float memory; // in MBs
     
-    public RAM(string modelName, Manufacturer manufacturer, float malfunctionRate, float cost, RAMType type, float memory, bool isMantadory) : base(modelName, manufacturer, malfunctionRate, cost, isMantadory)
+    public RAM(string modelName,string manufacturer, float malfunctionRate, float cost, RAMType type, float memory, bool isMantadory) : base(modelName, manufacturer, malfunctionRate, cost)
     {
         this.memory = memory;
         this.type = type;
