@@ -10,7 +10,7 @@ public class Keyboard : Hardware
     {
 
     }
-    public Keyboard(string modelName,string manufacturer, float malfunctionRate, float cost, bool isMantadory, int additionalButtons) : base(modelName, manufacturer, malfunctionRate, cost)
+    public Keyboard(string modelName,string manufacturer, float malfunctionRate, float cost,  int additionalButtons) : base(modelName, manufacturer, malfunctionRate, cost)
     {
         this.additionalButtons = additionalButtons;
     }

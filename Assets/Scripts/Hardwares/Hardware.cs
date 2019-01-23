@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Xml.Serialization;
 
 public class Hardware
 {
     public string modelName;
-    public Manufacturer manufacturer;
+    [XmlElement(Type = typeof(GameType))] public Manufacturer manufacturer;
     [Range(0.01f, 100)] float malfunctionRate;
     public float cost;
     public static bool isMantadory;

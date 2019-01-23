@@ -29,7 +29,7 @@ public class ViewerGroup : MonoBehaviour
     public int population;
 
     // favorites
-    public List<GameType> favoriteGames;
+    public List<string> favoriteGames;
     public List<AudioClip> favoriteSongs;
     public Stream.PlayStyle favStyle;
 
@@ -41,11 +41,7 @@ public class ViewerGroup : MonoBehaviour
     {
         this.groupName = groupName;
         this.population = population;
-        this.favoriteGames = new List<GameType>();
-        foreach (string s in favoriteGames)
-        {
-            this.favoriteGames.Add(GameType.types.Find(g => g.name == s));
-        }
+        this.favoriteGames = favoriteGames;
         this.favStyle = favStyle;
         AddRandomTraits(traitCount);
 
@@ -66,5 +62,15 @@ public class ViewerGroup : MonoBehaviour
     public bool HasTrait(Trait t)
     {
         return traits.Exists(x => x == t);
+    }
+
+    public List<GameType> FavoriteGames()
+    {
+        List<GameType> retVal = new List<GameType>();
+        foreach (string type in favoriteGames)
+        {
+            retVal.Add(GameType.types.Find(g => g.name == type));
+        }
+        return retVal;
     }
 }

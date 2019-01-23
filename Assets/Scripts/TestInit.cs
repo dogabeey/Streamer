@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class TestInit : MonoBehaviour
 {
 	// Use this for initialization
 	void Start ()
     {
+        
         new GameType("action", 1, 1);
         new Game("Call of Duty", "action", 70, 40);
         new Manufacturer("Lobbytech", 90);
@@ -18,11 +21,12 @@ public class TestInit : MonoBehaviour
             new Player();
         }
 
-        XmlParse.ExportAll(GameType.types);
-        XmlParse.ExportAll(Game.games);
-        XmlParse.ExportAll(Manufacturer.manufacturers);
-        //XmlParse.ExportAll(Webcam.);
-
+        JsonParse.ExportAll(GameType.types);
+        JsonParse.ExportAll(Game.games);
+        JsonParse.ExportAll(Player.players);
+                
+        InitializeData();
+        
     }
 	
 	// Update is called once per frame
@@ -33,10 +37,5 @@ public class TestInit : MonoBehaviour
     public void InitializeData()
     {
         // Whenever a new game concept is added in xml file, insert a new string here to include them in init. progress.
-        GameType.types.AddRange(XmlParse.ImportAll<GameType>());
-        Manufacturer.manufacturers.AddRange(XmlParse.ImportAll<Manufacturer>());
-        Game.games.AddRange(XmlParse.ImportAll<Game>());
-        Player.players.AddRange(XmlParse.ImportAll<Player>());
-        ViewerGroup.groups.AddRange(XmlParse.ImportAll<ViewerGroup>());
     }
 }

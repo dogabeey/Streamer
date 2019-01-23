@@ -11,7 +11,7 @@ public class Headphone : Hardware
     {
     }
 
-    public Headphone(string modelName,string manufacturer, float malfunctionRate, float cost, bool isMantadory, float maxFrequency, float sensitivity) : base(modelName, manufacturer, malfunctionRate, cost)
+    public Headphone(string modelName,string manufacturer, float malfunctionRate, float cost,  float maxFrequency, float sensitivity) : base(modelName, manufacturer, malfunctionRate, cost)
     {
         this.maxFrequency = maxFrequency;
         this.sensitivity = sensitivity;
